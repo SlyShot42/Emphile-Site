@@ -8,29 +8,44 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="http://localhost:3000/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer ></script>
+
+    
     <title>Emphile</title>
   </head>
   <body>
-    <h1>Please enter the information below.</h1>
-    <form action="chat.html">
-        <fieldset>
-            <label for="gender">I am:</label>
-            <select id="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <label for="searchingfor">Looking for:</label>
-            <select id="searchingfor">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </fieldset>
-        <fieldset>
-            <label for="age">Enter age:</label>
-            <input type="text" id="age" >
-        </fieldset>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div id="userFormArea">
+        <h1>Please enter the information below.</h1>
+        <form id="userForm">
+            <fieldset>
+                <label for="gender">I am:</label>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <label for="searchingFor">Looking for:</label>
+                <select id="searchingFor">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="age">Enter age:</label>
+                <input type="text" id="age" >
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div id="messageArea">
+        <div id="message-container"></div>
+        <form id="send-container">
+            <input type="text" id="message-input">
+            <button type="submit" id="send-button" class="btn btn-primary">Send</button>
+        </form>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

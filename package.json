@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SlyShot42/Emphile-Site#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "socket.io": "^3.0.4"
   },
   "devDependencies": {
