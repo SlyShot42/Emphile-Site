@@ -16,36 +16,64 @@
     <title>Emphile</title>
   </head>
   <body>
-    <div id="userFormArea">
-        <h1>Please enter the information below.</h1>
-        <form id="userForm">
-            <fieldset>
-                <label for="gender">I am:</label>
-                <select id="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-                <label for="searchingFor">Looking for:</label>
-                <select id="searchingFor">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <label for="age">Enter age:</label>
-                <input type="text" id="age" >
-            </fieldset>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="row g-0">
+        <div class="col-md-4">
+            <div class="leftside">
+                <h1>Emphile</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis esse distinctio officiis provident, hic animi amet vitae harum itaque. Laboriosam doloremque rerum minus neque asperiores perferendis rem sed deserunt explicabo.</p>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="rightside">
+                <div id="userFormArea">
+                    <form id="userForm">
+                    <fieldset>
+    
+                        <h2>We are all just ships in the night.</h2>
+                        <div class="group">
+                        <label for="gender">I am:</label><br/>
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select><br>
+                        </div>
+                        <div class="group">
+                        <label for="searchingFor">Looking for:</label><br/>
+                        <select id="searchingFor">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        </div>
+                
+                        <div class="group">
+                        <label for="age">Enter age:</label><br/>
+                        <input type="text" id="age" >
+                        </div>
+
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                    <!--Messaging was moved into .rightcontainer-->
+                    <div id="messageArea">
+                        <div id="message-container"></div>
+                        <form id="send-container">
+                            <input type="text" id="message-input">
+                            <button type="submit" id="send-button" class="btn btn-primary">Send</button>
+                        </form>
+                </div> 
+            </div>
+        </div>
     </div>
 
-    <div id="messageArea">
-        <div id="message-container"></div>
-        <form id="send-container">
-            <input type="text" id="message-input">
-            <button type="submit" id="send-button" class="btn btn-primary">Send</button>
-        </form>
-    </div>
+
+
+
+
+   
+
+  
 
     <!-- Optional JavaScript; choose one of the two! -->
 
