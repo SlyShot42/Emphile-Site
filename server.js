@@ -39,6 +39,6 @@ io.on('connection', socket => {
     socket.on('new user', (data, callback) => {
         callback(true)
         socket.user = data
-        users.push(socket.use)
+        users.push(socket.user)
     })
 })
