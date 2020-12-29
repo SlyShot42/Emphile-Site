@@ -1,3 +1,55 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 #messageArea{
     display:none;
+}
+/* targetting forms */
+h2{
+    margin-bottom: 20px;
+}
+
+#gender ,  #searchingFor{
+    border-radius: 30px;
+    height: 40px; width: 166px;
+    margin-right: 25px;
+}
+    #age{
+        border-radius: 30px;
+        height: 40px; width: 130px;
+}
+/*creating the left side and right side with respected attributes*/
+.leftside, .rightside{
+    height:50vh;
+    width:100%
+}
+
+.leftside{
+    background-color: #00564d;
+    text-align: center;
+    
+}
+
+.rightside{
+    background-color:#363636;
+    color: white;
+    text-align: center;
+    
+}
+@media (min-width:760px){
+    .leftside, .rightside{
+        height: 100vh;
+    }
+}
+
+.group{
+    display: inline-block;
+}
+.btn{
+    background-color: #969696;
+    margin-top: 20px;
+    margin-left: 115px;
+    padding:0px;
+    border-radius: 30px;
+    height: 40px; width: 100px;
 }
