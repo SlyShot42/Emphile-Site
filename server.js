@@ -27,9 +27,24 @@ io.on('connection', socket => {
     console.log('Connected: %s sockets connected', connections.length)
 
     socket.on('disconnect', data => {
-        users.splice(users.indexOf(socket.user["userId"]), 1)
-        connections.splice(connections.indexOf(socket), 1)
+        users.splice(users.indexOf(users['mySocket']), 1)
+        connections.splice(connections.indexOf(users), 1)
+        console.log('Disconnected: %s users connected', users.length)
         console.log('Disconnected: %s sockets connected', connections.length)
+    })
+
+    socket.on('discon', (data, callback) => {
+        callback(true)
+        users.splice(users.indexOf(data['mySocket']), 1)
+        console.log('Disconnected: %s users connected', users.length)
+    })
+
+    socket.on('newcon', (data, callback) => {
+        callback(true)
+        var user = data;
+        user['mySocket'] = socket
+        users.push(user)
+        console.log('Connected: %s users connected', users.length)
     })
 
     socket.on('send message', data => {
@@ -38,7 +53,9 @@ io.on('connection', socket => {
 
     socket.on('new user', (data, callback) => {
         callback(true)
-        socket.user = data
-        users.push(socket.user)
+        var user = data
+        user['mySocket'] = socket
+        users.push(user)
+        console.log('Connected: %s users connected', users.length)
     })
 })

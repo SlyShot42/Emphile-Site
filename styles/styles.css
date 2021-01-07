@@ -4,6 +4,14 @@
 #messageArea{
     display:none;
 }
+
+#newconArea{
+    display:none;
+}
+
+#disconArea{
+    display:block;
+}
 /* targetting forms */
 h2{
     margin-bottom: 20px;
